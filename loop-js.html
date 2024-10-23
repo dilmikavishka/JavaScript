@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-loop</title>
+</head>
+<body>
+<script>
+
+    //for loop
+    for (var i=0;i<10;i++){
+        console.log(i+1)
+    }
+
+    var total=0;
+    for (var i=0;i<=100;i++){
+        if ((i%2)==0){
+            total+=i
+        }
+    }
+    console.log(total)//even numbers total
+
+    //while loop
+    var total1=0;
+    var count = 0
+    while (count<=100){
+        if (++count % 2 === 0){
+            total1+=count
+        }
+    }
+    console.log(total1)//even numbers total
+
+    //do-while loop
+    do {
+        if (count % 2 === 0){
+            total1+=count
+        }
+    }while (count<=100)
+    console.log(total1)//even numbers total
+
+
+
+
+</script>
+</body>
+</html>

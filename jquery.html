@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hello Jquery!!!</h1>
+<P id="phara">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, cumque distinctio doloremque ea eligendi exercitationem explicabo ipsam iusto libero maxime natus nemo nihil non quasi qui quos ratione recusandae suscipit.</P>
+<P class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, cumque distinctio doloremque ea eligendi exercitationem explicabo ipsam iusto libero maxime natus nemo nihil non quasi qui quos ratione recusandae suscipit.</P>
+
+<script src="asset/lib/jquery-3.7.1.min.js"></script><!--samahara library thiyenawa wada karanne  nh jquery eka nisa meka mulin dala passe anith libary add karanna-->
+<script>
+    /*$("h1").hide();*/
+    $("h1").css("background","pink");/*apply css only select element*/
+    $("#phara").css("color","blue");/*apply css only select id*/
+    $(".desc").css("color","pink");/*apply css only select class*/
+
+    //document dot ready method standard way
+    $(document).ready(function (){
+        console.log("document ready!!!");
+    });
+
+    //document dot ready method short way
+    $(function (){
+        console.log("document ready!!!")
+    })
+
+
+
+</script>
+</body>
+</html>

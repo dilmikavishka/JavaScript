@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Form Example</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h2 class="mb-4"><b>User Form</b></h2>
+    <!-- Form Section -->
+    <form>
+        <div class="mb-3">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Enter First Name">
+        </div>
+        <div class="mb-3">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter Email">
+        </div>
+        <div class="mb-3">
+            <button type="button" class="btn btn-primary me-2" id="save">Save</button>
+            <button type="button" class="btn btn-warning me-2" id="update">Update</button>
+            <button type="button" class="btn btn-danger" id="delete">Delete</button>
+        </div>
+    </form>
+
+    <!-- Table Section -->
+    <h3 class="mt-5">User List</h3>
+    <table class="table table-striped">
+        <thead class="table-dark">
+        <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+</div>
+
+<div style="width: 200px; height: 200px;background: deepskyblue;border: 2px solid black" id="box"></div>
+
+<script>
+
+    document.getElementById("save").addEventListener('click',function (){
+
+        let  fname = document.getElementById("firstName").value;
+        let  lname = document.getElementById("lastName").value;
+        let  email = document.getElementById("email").value;
+
+        let inner_htlm = document.getElementById("tbody").innerHTML;
+
+        let new_html = inner_htlm+"<tr><td>"+fname+"</td><td>"+lname+"</td><td>"+email+"</td></tr>";
+        document.getElementById("tbody").innerHTML=new_html;
+        /*document.getElementById("tbody").innerHTML += inner_htlm+"<tr><td>"+fname+"</td><td>"+lname+"</td><td>"+email+"</td></tr>";*/
+
+    });
+
+    document.getElementById('firstName').addEventListener('keydown',function (){
+        console.log("keyDown!!!");
+    });
+
+    document.getElementById('firstName').addEventListener('keyup',function (){
+        console.log("keyUp!!!");
+    });
+
+    document.getElementById('firstName').addEventListener('keypress',function (){
+        console.log("keyPress!!!");
+    });
+
+    document.getElementById('firstName').addEventListener('keydown',function (event){
+        console.log("eventKey!!!",event.key);
+    });
+
+    document.getElementById('save').addEventListener('keydown',function (event1){
+        console.log("target!!!",event1.target.value);
+    });
+
+    document.getElementById('save').addEventListener('mouseup',function (){
+        console.log("mouseup!!!");
+    });
+    document.getElementById('save').addEventListener('mousedown',function (){
+        console.log("mousedown!!!");
+    });
+
+    document.getElementById('box').addEventListener('mouseenter',function (){
+        console.log("mouse enter!!!");
+    });
+
+    document.getElementById('box').addEventListener('mouseout',function (){
+        console.log("mouse out!!!");
+    });
+
+    document.getElementById('box').addEventListener('mouseover',function (){
+        console.log("mouse over!!!");
+    });
+
+
+
+
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+<!--
+dbclick kiyanne double click event-->

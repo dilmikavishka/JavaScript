@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<section>
+  <ul>
+    <li>Backend</li>
+    <li>Frontend</li>
+    <li>
+      <ol>
+        <li>Sri Lanka</li>
+        <li>India</li>
+      </ol>
+    </li>
+  </ul>
+</section>
+
+<script src="asset/lib/jquery-3.7.1.min.js"></script>
+<script>
+  console.log($("ol").parents());
+  console.log($("ol").parents("section"));
+  console.log($("ol").parentsUntil("section"));
+  console.log($("ul").children());
+  console.log($("ul").children().eq());
+  console.log($("ul").children().eq(2));
+  console.log($("ul").children().eq(2).eq(0).text());
+  console.log($("ol").children().eq(1).text());
+  console.log($("ol").children().first().text());//first children wa laba denawa
+
+</script>
+
+</body>
+</html>

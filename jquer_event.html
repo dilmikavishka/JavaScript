@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>Click</button>
+<h1>Hello jQuery event</h1>
+<input id="input" type="text" placeholder="enter your name">
+
+<select>
+    <option value="java">Java</option>
+    <option value="Python">Python</option>
+    <option value="C#">C#</option>
+    <option value="go">Go</option>
+</select>
+
+<script src="asset/lib/jquery-3.7.1.min.js"></script>
+<script>
+
+   /* document.getElementsByTagName("button")[0].addEventListener('click',function (){
+        console.log("click!!!!");
+    });*/
+
+   //click event
+   $("button").click(function (){
+       console.log("jquery click!!!");
+   });//action event ekak button eka button click karama
+
+   //dbClick event
+   $("button").dblclick(function (){
+       console.log("jquery dbClick!!!");
+   });
+
+   //mouseenter event
+   $("button").mouseenter(function () {
+       console.log("jQuery mouse enter");//button eka uadata giyaama pennanawa
+   });
+
+   //mouseenter down
+   $("h1").hover(function () {
+       console.log("jQuery hover");//curser eka giyama eka udata hover wenawa
+   });
+
+
+   //mouseenter leave
+   $("button").mouseleave(function () {
+       console.log("jQuery mouse leave");//button eken eliyata awama
+   });
+
+   //mouseenter up
+   $("button").mouseup(function () {
+       console.log("jQuery mouse up");//click karaddi
+   });
+
+   //mouseenter down
+   $("button").mousedown(function () {
+       console.log("jQuery mouse down");//click karala atha ariyama
+   });
+
+   //change event
+   $("#input").change(function (){
+       console.log("jquery chang event!!");//text field eke type karanakota wenas karaddi penawa
+   });
+
+   //focus event
+   $("#input").focus(function (){
+       console.log("jquery focus event!!");//text field eka udata giyama penawa eke inne kiyala
+   });
+
+   //blue event
+   $("#input").blur(function (){
+       console.log("jquery blur event!!");
+   });
+
+   //change event
+   $("select").change(function (){
+       console.log("jquery chant event!!");
+   });
+
+   //change event
+   $("select").change(function (event){
+       console.log("jquery chant event :-",event.target.value);//select karana value eka balanna puluwean
+   });
+
+   //on method
+   $("button").on('click',function (){
+       console.log("on method click");
+   });
+
+   //on method
+   $("input").on('input',function (){
+       console.log("on  input method ");
+   });
+
+   //on method
+   $("input").on('input',function (event){
+       console.log("on  input method :-",event.target.value);
+   });
+
+   //on method eka athulata event kihipayak dennath  ouluwan
+   $("button").on({
+       click:function (){
+           console.log("click event!!!!!");
+       },
+
+       dblclick:function (){
+           console.log("double click event!!!!!");
+       }
+   });
+
+
+
+</script>
+</body>
+</html>

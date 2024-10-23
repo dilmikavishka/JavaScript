@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        section{
+            display: flex;
+        }
+
+        section>div{
+            width: 100px;
+            aspect-ratio: 1/1;
+            background: rgba(61, 63, 191, 0.83);
+            border: 2px solid black;
+            border-radius: 8px;
+            margin: 8px;
+            display: flex;
+            align-items: center;
+            align-self: center;
+            justify-content: space-evenly;
+        }
+
+        section>div>h4{
+            width: max-content;
+            height: max-content;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+<section>
+    <div>
+        <h4>A</h4>
+    </div>
+    <div>
+        <h4>B</h4>
+    </div>
+    <div>
+        <h4>C</h4>
+    </div>
+    <div>
+        <h4>D</h4>
+    </div>
+    <div>
+        <h4>E</h4>
+    </div>
+    <div>
+        <h4>F</h4>
+    </div>
+</section>
+
+<script>
+    let arr = ["A","B","C","D","E","F"];
+    setInterval(()=>{
+        let last_value = arr.pop();
+        arr.unshift(last_value);
+        console.log(arr);
+
+        document.getElementsByTagName("h4")[0].innerText = arr[0];
+        document.getElementsByTagName("h4")[1].innerText = arr[1];
+        document.getElementsByTagName("h4")[2].innerText = arr[2];
+        document.getElementsByTagName("h4")[3].innerText = arr[3];
+        document.getElementsByTagName("h4")[4].innerText = arr[4];
+        document.getElementsByTagName("h4")[5].innerText = arr[5];
+
+    },3000);
+
+</script>
+
+</body>
+</html>

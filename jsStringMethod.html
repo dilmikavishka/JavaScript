@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var name = "Hello World"
+    console.log(name.charAt(1))//e
+    console.log(name.charAt(7))//o
+
+    var str1 = "Hello"
+    var str2 = "world"
+    var str3 = "Java"
+
+    console.log(str1.concat(str2))//Helloworld
+    console.log(str1.concat(","+str2+","+str3))//Hello,world,java
+
+    var myStr = "Welcome to ijse.lk"
+    var myStr1 = "Welcome to ijse.com"
+
+    console.log(myStr.endsWith("lk"))//true
+    console.log(myStr1.endsWith("lk"))//false
+    console.log(myStr.startsWith("Welcome"))//true
+
+    console.log(String.fromCharCode(72))//H
+
+    var new_str = "Hello Welcome To Sri lanka.this is beautiful country in Sri lanka"
+    console.log(new_str.includes("Sri lanka"))//true
+    console.log(new_str.includes("No"))//false
+    console.log(new_str.length)//63
+
+    /*indexOf(),lastIndexOf()*/
+    var new_str1 = "hello word"
+    console.log(new_str1.indexOf("hello word"))
+
+    new_str1 = "hello word word"
+    console.log(new_str1.lastIndexOf("hello word word"))
+
+    /*localeCompare()*/
+    var new_str2 = "apple"
+    var new_str3 = "mango"
+    var new_str4 = "g"
+    var new_str5 = "A"
+
+    console.log(new_str2.localeCompare(new_str3))//-1
+    console.log(new_str3.localeCompare(new_str4))//0
+/*    console.log(new_str5.localeCompare(new_str4))//1*/
+
+
+    /*match()*/
+    let str = "The quick brown fox Jumps over the Lazy dog"
+    console.log(str.match(/o/g))//4
+    console.log(str.match(/([A-Z])\w+/g))//3['The', 'Jumps', 'Lazy']
+
+    /*replace()*/
+    var str100 = "A  B C D E F"
+    console.log(str100.replace(" ",","))//A, B C D E F
+    console.log(str100.replaceAll(" ",","))//A,,B,C,D,E,F
+
+    /*search()*/
+    var dil = "hello hi welcome hi"
+    console.log(dil.search("hi"))
+
+    /*slice()*/
+    var y = "Hello, world"
+    console.log(y.slice(7,12))//world
+    console.log(y.slice(2,7))//llo,
+
+    /*split()*/
+    var b = "A,B,C,D,E,F"
+    console.log(b.split(","))//(6)['A', 'B', 'C', 'D', 'E', 'F']
+
+    /*startWith*/
+    var cat = "Hello, Hi"
+    console.log(cat.startsWith("Hello"))//true
+    console.log(cat.startsWith("Hi"))//false
+    console.log(cat.endsWith("Hi"))//true
+
+    /*substr()*/
+    var a = "Hello, world"
+    console.log(a.substr(6))//world
+    console.log(a.substr(2,4))//llo,
+
+    /*subString()*/
+    var w = "Hello, world"
+    console.log(w.substring(2,6))//llo,
+
+    /*toLocaleLowerCase()*/
+    var qw = "Hello, world"
+
+    console.log(qw.toLocaleLowerCase())//hello, world
+    console.log(qw.toLocaleUpperCase())//HELLO, WORLD
+
+    //unicode use karala thama meyala wada karanne
+    console.log(qw.toLowerCase())
+    console.log(qw.toUpperCase())
+
+    /*trim()*/
+    var go = "Dilmi Kavishka"
+    console.log(go.trim())//Dilmi Kavishka
+
+</script>
+</body>
+</html>
